@@ -1,0 +1,7 @@
+{
+  "name": "frete",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
