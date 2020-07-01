@@ -6,7 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+    data: any;
 
-  constructor() {}
-
+  constructor() {
+    this.data = {
+        labels: ['Lucro','Investimentos'],
+        datasets: [
+            {
+                data: [ 50, 100],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                ]
+            }]    
+        };
+}
 }

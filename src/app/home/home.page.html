@@ -1,20 +1,89 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+<div  style=" color: white; padding: 0.5em;  background-color: transparent;
+">
+<div class="container">
+<ion-row> 
+  <ion-col size="12">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Valor do combustivel</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    
+  </ion-col>
+  
+</ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-row> 
+  <ion-col size="6">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Local de partida</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+  </ion-col>
+  <ion-col size="6">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Local de destino</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+</ion-col>
+</ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+
+<ion-row> 
+  <ion-col size="12">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Distância entre locais</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+  </ion-col>
+  
+</ion-row>
+
+
+
+<ion-row> 
+  <ion-col size="12">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Média do consumo do automóvel KM/H</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+  </ion-col>
+  
+</ion-row>
+<ion-row> 
+  <ion-col size="12">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Lucro desejado em %</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+  </ion-col>
+  
+</ion-row>
+<input type="button" class="btn btn-block btn-primary " value="vamo ve"/>
+</div>
+
+</div>
+
 </ion-content>
+<!--
+  aplicativo de frete, onde há as seguintes variaveis: 
+
+		- valor do combustivel
+		- local de partida
+		- local de destino 
+		- km/h entre lp e ld 
+		- km/h do automóvel 
+		- margem de erro 
+		- lucro em cima do frete desejado 
+		- media de lucro e gasto na dashboard 
+			
+
+função    1°  valor do combustivel * km/h entre lp e ld = novo valor 
+2°  novo valor / km/h do automóvel = valor da viagem
+3°  /*colocar porcentagem deseja em cima do (valor da viagem)*/ valor da viagem + porcentagem 
+            = valor da viagem com lucro
+4° valor da viagem com lucro / porcentagem = lucro
+5°/*fazer contagem de lucro + margem de erro (cima e baixo)*/
+<p-chart type="pie" [data]="data"></p-chart>
+-->
