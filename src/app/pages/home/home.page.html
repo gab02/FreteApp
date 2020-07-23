@@ -1,18 +1,21 @@
 <ion-content>
-<div  style=" color: white; padding: 0.5em;  background-color: transparent;
-">
-<div class="container">
+  
+<div  class="container" style=" color: white; padding: 0.5em;  background-color: transparent;
+">   
+ <form [formGroup]="formGroup">
+
 <ion-row> 
   <ion-col size="12">
     <div class="form-group">
       <label for="exampleInputEmail1">Valor do combustivel</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+      <input type="number" formControlName="valorCombustivel" required id="valorCombustivel" class="form-control"  >
     </div>
     
   </ion-col>
   
 </ion-row>
-
+<!--
 <ion-row> 
   <ion-col size="6">
     <div class="form-group">
@@ -27,14 +30,14 @@
     </div>
 </ion-col>
 </ion-row>
-
+-->
 
 
 <ion-row> 
   <ion-col size="12">
     <div class="form-group">
       <label for="exampleInputEmail1">Distância entre locais</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="number" formControlName="km" required id="km" class="form-control"  >
     </div>
   </ion-col>
   
@@ -46,8 +49,8 @@
   <ion-col size="12">
     <div class="form-group">
       <label for="exampleInputEmail1">Média do consumo do automóvel KM/H</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
+
+      <input type="number" formControlName="cConsumoCar" required id="cConsumoCar" class="form-control"  >    </div>
   </ion-col>
   
 </ion-row>
@@ -61,14 +64,12 @@
   
 </ion-row>
 <input type="button" class="btn btn-block btn-primary " value="vamo ve"/>
-</div>
-
+</form>
 </div>
 
 </ion-content>
 <!--
   aplicativo de frete, onde há as seguintes variaveis: 
-
 		- valor do combustivel
 		- local de partida
 		- local de destino 
@@ -78,7 +79,6 @@
 		- lucro em cima do frete desejado 
 		- media de lucro e gasto na dashboard 
 			
-
 função    1°  valor do combustivel * km/h entre lp e ld = novo valor 
 2°  novo valor / km/h do automóvel = valor da viagem
 3°  /*colocar porcentagem deseja em cima do (valor da viagem)*/ valor da viagem + porcentagem 
