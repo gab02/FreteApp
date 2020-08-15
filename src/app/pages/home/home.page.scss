@@ -21,7 +21,19 @@
 
   margin: 0;
 }
-
 #container a {
   text-decoration: none;
+}
+.alertHeader {
+  color: #ffffff !important;
+ // --color: #b52024 !important;
+}
+h2.alertHeader {
+ color: #b52024 !important;
+// --color: #b52024 !important;
+}
+
+//this works for alertHeader when inspecting in the browser
+.alert-sub-title.sc-ion-alert-md, .alert-title.sc-ion-alert-md {
+ color: #b32224;
 }
