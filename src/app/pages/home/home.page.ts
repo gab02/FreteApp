@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Parametros } from './model/parametros.module';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -23,8 +24,16 @@ ngOnInit(){
   console.log(this.cConsumoCar);
 
 }
-  constructor(private fb: FormBuilder,public alertController: AlertController,     public loadingController: LoadingController
+  constructor(private fb: FormBuilder,public alertController: AlertController, private router: Router, public loadingController: LoadingController
         ) {}
+  sair(){
+    this.router.navigate(['pages', 'login']);
+
+  }
+  dash(){
+    this.router.navigate(['pages', 'preview']);
+
+  }
   
   gerarForm() {
     this.formGroup = this.fb.group({

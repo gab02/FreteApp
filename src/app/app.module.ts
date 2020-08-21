@@ -1,3 +1,9 @@
+import { PreviewPageModule } from './pages/preview/preview.module';
+import { PreviewPageRoutingModule } from './pages/preview/preview-routing.module';
+import { LoginPageRoutingModule } from './pages/login/login-routing.module';
+import { LoginPageModule } from './pages/login/login.module';
+import { HomePageRoutingModule } from './pages/home/home-routing.module';
+import { HomePageModule } from './pages/home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -16,6 +22,12 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    HomePageModule,
+    HomePageRoutingModule,
+    LoginPageModule,
+    LoginPageRoutingModule,
+    PreviewPageRoutingModule,
+    PreviewPageModule,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
