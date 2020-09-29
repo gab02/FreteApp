@@ -1,9 +1,27 @@
 
 
 <ion-content>
+  <ion-fab style="margin-left: 80%; margin-top: 10px;" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
   
-<div  class="container" style=" height: 100%; color: white; padding: 0.5em; background-image: linear-gradient( to right, #3b463cbe, #4547459d);
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="dash()"><ion-icon name="home" ></ion-icon></ion-fab-button>
+      <br>
+      <ion-fab-button><ion-icon name="options"></ion-icon></ion-fab-button>
+      <br>
+      <ion-fab-button><ion-icon (click)="sair()" name="exit"></ion-icon></ion-fab-button>
+  
+    </ion-fab-list>
+  
+  
+  
+  </ion-fab>
+<div  class="container" style=" height:  auto; color: white; padding: 0.5em; background-image: linear-gradient( to right, #3b463cbe, #4547459d);
 ">   
+<div  class="container" style=" height: auto; color: white; padding: 0.5em; background-image: linear-gradient( to right, #3b463cbe, #4547459d);
+"> 
  <form [formGroup]="formGroup">
 
 <ion-row> 
@@ -53,9 +71,25 @@
 
       <input type="number" formControlName="cConsumoCar" required id="cConsumoCar" class="form-control"  >    </div>
   </ion-col>
-  
 </ion-row>
-<!--
+<ion-row>
+<ion-col size="12">
+  <div class="form-group">
+    <label>Possiveis gastos:</label>
+    <ion-select  multiple="true" class="form-control btn-success" cancelText="Cancelar"
+      okText="Confirmar" style="background-color: white; color: black;">
+      <ion-select-option value="bacon">óleo de motor</ion-select-option>
+      <ion-select-option value="olives">Pastilhas de freio</ion-select-option>
+      <ion-select-option value="xcheese">Pneu</ion-select-option>
+      <ion-select-option value="peppers">Suspensão</ion-select-option>
+      <ion-select-option value="mushrooms">óleo de cambio</ion-select-option>
+      <ion-select-option value="onions">óleo de freio</ion-select-option>
+      
+    </ion-select>
+  </div>
+</ion-col>
+</ion-row>
+
 <ion-row> 
   <ion-col size="12">
     <div class="form-group">
@@ -65,7 +99,6 @@
   </ion-col>
   
 </ion-row>
--->
 <ion-button type="button" expand="block" (click)="cotacao()">Cotacionar</ion-button>
 
 </form>
@@ -74,8 +107,7 @@
  
   <ion-item-sliding style="background-image: linear-gradient( to right, #3b463cbe, #4547459d);">
     <ion-item-options side="start">
-      <ion-item-option >Favorite</ion-item-option>
-      <ion-item-option color="danger" >Share</ion-item-option>
+      <ion-item-option color=success >Salvar</ion-item-option>
     </ion-item-options>
 
     <ion-item style=" width: 100%; height: 100%;" >
@@ -107,10 +139,9 @@
           Valor total
         </ion-col>
       <ion-col style="color: rgb(219, 219, 219);" size="6">
-        R$ {{total}}
+        R$ {{valorFinal}}
       </ion-col>
       </ion-row> 
-      
       
           </ion-card-content>
         </ion-card>
@@ -122,12 +153,16 @@
   </ion-item-sliding>
 </div>
 <ion-row>
-  <ion-col size="6"><ion-button (click)="sair()" expand="block"> Sair</ion-button></ion-col>
-  <ion-col size="6"><ion-button (click)="dash()" expand="block"> Dash</ion-button></ion-col>
 
 </ion-row>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>
-
+</div>
 </ion-content>
 <!--     *ngFor="let itam of  itens;
   aplicativo de frete, onde há as seguintes variaveis: 

@@ -15,6 +15,9 @@ km :                 number;
 lucro:              number;
 cConsumoCar:        number;
 total: number;
+porcentagem: number;
+resto: number;
+valorFinal: number;
 formGroup: FormGroup;
 addLocal: boolean;
 itens: Array<Parametros> = [];
@@ -147,7 +150,18 @@ let resto  = km / cConsumoCar;
 //3° parte, obter o valor total gasto 
 let valorCombustivel= this.formGroup.get('valorCombustivel').value;
 //Fazer valor da "km/consumo" sendo o valor final de gasto (ainda sem lucro)
-this.total = resto * valorCombustivel;
+
+// fazer porecentagem
+let porcentagem = this.formGroup.get('lucro').value;
+if((porcentagem === NaN)||(porcentagem === undefined)||(porcentagem === null)||(porcentagem === '')){
+  this.valorFinal = resto * valorCombustivel;
+}else{
+  this.total = resto * valorCombustivel;
+this.porcentagem / 100;
+this.porcentagem = resto;
+this.resto * 100;
+this.valorFinal = resto + this.total;
+}
 this.addLocal = true;
 this.itens.push(this.formGroup.value);
 loading.dismiss();

@@ -1,6 +1,35 @@
 
 <ion-content>
+  <ion-fab style="margin-left: 80%; margin-top: 10px;" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+  
+    <ion-fab-list side="bottom">
+      <ion-fab-button><ion-icon name="home"></ion-icon></ion-fab-button>
+      <br>
+      <ion-fab-button><ion-icon name="options"></ion-icon></ion-fab-button>
+      <br>
+      <ion-fab-button><ion-icon (click)="sair()" name="exit"></ion-icon></ion-fab-button>
+
+    </ion-fab-list>
+
+ 
+  
+  </ion-fab>
 <div class="container" style="padding: 0.4em;">
+ 
+ <!--
+    <ion-fab  style="margin-top: 130%; margin-left: 80%;" slot="fixed">
+    <ion-fab-button color=success >  <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab  style="margin-top: 110%; margin-left: 80%;" slot="fixed">
+    <ion-fab-button color=success >  <ion-icon ios="ios-arrow-down" md="md-arrow-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  -->
+
   <ion-row>
       <ion-card color=success style=" width: 100%;background-color: #2298F1;">
         <ion-card-header style="	font-family: Montserrat, Helvetica, Open Sans, Arial">
@@ -16,7 +45,7 @@
           </ion-row>
           </ion-card-content>
           <hr style="background-color: white; width: 90%; text-align: center;">
-          <ion-row style="text-align: center; font-family: Montserrat, Helvetica, Open Sans, Arial" class="cardfooter">
+          <ion-row (click)="ModalRealizadas()" style="text-align: center; font-family: Montserrat, Helvetica, Open Sans, Arial" class="cardfooter">
          
             <ion-col size="12">
               <p>Vizualizar cotações</p>
@@ -43,10 +72,8 @@
       <hr style="background-color: white; width: 90%; text-align: center;">
 
       <ion-row style="text-align: center; font-family: Montserrat, Helvetica, Open Sans, Arial" class="cardfooter">
-        <ion-col size="6">
-        <p>Nova cotação</p>
-        </ion-col>
-        <ion-col size="6">
+      
+        <ion-col (click)="ModalTransito()" size="12">
           <p>Vizualizar cotações</p>
         </ion-col>
       </ion-row>
@@ -70,10 +97,10 @@
       <hr style="background-color: white; width: 90%; text-align: center;">
 
       <ion-row style="text-align: center; font-family: Montserrat, Helvetica, Open Sans, Arial" class="cardfooter">
-        <ion-col size="6">
+        <ion-col (click)="cotacao()" size="6">
         <p>Nova cotação</p>
         </ion-col>
-        <ion-col size="6">
+        <ion-col (click)="ModalFuturas()" size="6">
           <p>Vizualizar cotações</p>
         </ion-col>
       </ion-row>
@@ -99,13 +126,14 @@
 
       <ion-row style="text-align: center; font-family: Montserrat, Helvetica, Open Sans, Arial" class="cardfooter">
          
-        <ion-col size="12">
+        <ion-col (click)="ModalDesistidas()" size="12">
           <p>Vizualizar cotações</p>
         </ion-col>
       </ion-row>
     </ion-card>
 </ion-row>
 <br>
+
   <ion-button expand="block" (click)="cotacao()">Criar Cotação</ion-button>
 
 </div>
