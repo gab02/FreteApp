@@ -23,11 +23,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ModalRealizadasPage } from './pages/modal-realizadas/modal-realizadas.page';
 import { ModalDesistidasPageModule } from './pages/modal-desistidas/modal-desistidas.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot(), 
+    AppRoutingModule,   
+    MatSidenavModule
+
+  ],
   providers: [
     StatusBar,
     SplashScreen,

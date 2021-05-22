@@ -24,4 +24,5 @@ export class ModalRealizadasPage implements OnInit {
       'dismissed': true
     });
   }
+  
 }

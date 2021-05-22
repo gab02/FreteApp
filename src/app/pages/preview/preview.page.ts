@@ -1,3 +1,4 @@
+import { AppComponent } from './../../app.component';
 import { ModalDesistidasPage } from '../modal-desistidas/modal-desistidas.page';
 import { ModalFuturasPage } from '../modal-futuras/modal-futuras.page';
 import { ModalTransitoPage } from '../modal-transito/modal-transito.page';
@@ -13,9 +14,11 @@ import { ModalController } from '@ionic/angular';
 })
 export class PreviewPage implements OnInit {
 
-  constructor(private router: Router, public modalController: ModalController) { }
+  constructor(private router: Router, public modalController: ModalController, public app: AppComponent) { }
 
   ngOnInit() {
+    this.app.valor = true;
+
   }
 cotacao(){
   this.router.navigate(['pages', 'home']);
@@ -36,10 +39,7 @@ async ModalDesistidas() {
   });
   return await modal.present();
 }
-sair(){
-  this.router.navigate(['pages', 'login']);
 
-}
 async ModalFuturas() {
   const modal = await this.modalController.create({
     component: ModalFuturasPage,
@@ -47,7 +47,7 @@ async ModalFuturas() {
   });
   return await modal.present();
 }
-
+  
 async ModalTransito() {
   const modal = await this.modalController.create({
     component: ModalTransitoPage,

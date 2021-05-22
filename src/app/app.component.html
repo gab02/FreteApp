@@ -1,6 +1,42 @@
+<ion-menu *ngIf="valor === true" side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+  <ion-fab *ngIf="valor === true" style="margin-left: 80%; margin-top: 10px;" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="home"></ion-icon>
+      </ion-fab-button>
+    
+      <ion-fab-list side="bottom">
+        <ion-fab-button (click)="dash()"><ion-icon name="home" ></ion-icon></ion-fab-button>
+        <br>
+        <ion-fab-button (click)="openFirst()"><ion-icon name="options"></ion-icon></ion-fab-button>
+        <br>
+        <ion-fab-button><ion-icon (click)="sair()" name="exit"></ion-icon></ion-fab-button>
+    
+      </ion-fab-list>
+    
+    
+    
+    </ion-fab>
+
 <ion-app> 
+  <ion-router-outlet id="main">
+  
 
-
-
-  <ion-router-outlet></ion-router-outlet>
+  </ion-router-outlet>
 </ion-app>

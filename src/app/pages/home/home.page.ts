@@ -1,3 +1,4 @@
+import { AppComponent } from './../../app.component';
 import { Router } from '@angular/router';
 import { Parametros } from './model/parametros.module';
 import { Component, OnInit } from '@angular/core';
@@ -25,9 +26,10 @@ itens: Array<Parametros> = [];
 ngOnInit(){
   this.gerarForm();
   console.log(this.cConsumoCar);
-
+this.app.valor = true;
 }
-  constructor(private fb: FormBuilder,public alertController: AlertController, private router: Router, public loadingController: LoadingController
+  constructor(private fb: FormBuilder,public alertController: AlertController, private router: Router, public loadingController: LoadingController,
+    public app: AppComponent,
         ) {}
   sair(){
     this.router.navigate(['pages', 'login']);
@@ -37,7 +39,9 @@ ngOnInit(){
     this.router.navigate(['pages', 'preview']);
 
   }
-  
+  abrir(){
+    this.app.openCustom();
+  }
   gerarForm() {
     this.formGroup = this.fb.group({
       valorCombustivel : ['', [Validators.required]],
